@@ -10,26 +10,7 @@
      "check": "tsc",
      "db:push": "drizzle-kit push"
    },
-```
 
-   **Let op:** We voegen `npm run db:push &&` toe aan de `"start"` regel!
-
-6. Scroll naar beneden
-7. Type: `Add database migration to start script`
-8. Klik **Commit changes**
-
----
-
-### **Stap 3: Railway zal opnieuw deployen**
-
-1. Ga naar **Railway**
-2. Klik op **Deployments**
-3. Wacht op de nieuwe deployment (2-3 minuten)
-4. Klik op **Logs** tijdens de deployment
-5. **Kijk of je dit ziet:**
-```
-   [drizzle-kit] Pushing schema changes...
-   [drizzle-kit] Success!
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@jridgewell/trace-mapping": "^0.3.25",
