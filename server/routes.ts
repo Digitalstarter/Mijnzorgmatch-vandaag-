@@ -16,9 +16,7 @@ console.log('STRIPE_SECRET_KEY exists:', !!process.env.STRIPE_SECRET_KEY);
 console.log('STRIPE_SECRET_KEY length:', process.env.STRIPE_SECRET_KEY?.length || 0);
 
 const stripe = process.env.STRIPE_SECRET_KEY 
-  ? new Stripe(process.env.STRIPE_SECRET_KEY, {
-      apiVersion: "2024-11-20.acacia",
-    })
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
   : null;
 
 console.log('Stripe initialized:', !!stripe);
