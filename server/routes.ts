@@ -11,11 +11,18 @@ import {
 } from "@shared/schema";
 import Stripe from "stripe";
 
+console.log('=== STRIPE DEBUG ===');
+console.log('STRIPE_SECRET_KEY exists:', !!process.env.STRIPE_SECRET_KEY);
+console.log('STRIPE_SECRET_KEY length:', process.env.STRIPE_SECRET_KEY?.length || 0);
+
 const stripe = process.env.STRIPE_SECRET_KEY 
   ? new Stripe(process.env.STRIPE_SECRET_KEY, {
       apiVersion: "2024-11-20.acacia",
     })
   : null;
+
+console.log('Stripe initialized:', !!stripe);
+console.log('===================');
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Setup authentication
